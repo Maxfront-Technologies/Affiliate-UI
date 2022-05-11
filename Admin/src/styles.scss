@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/scss/app";
+
+.body {
+    background: #f1f4fa;
+}
+.naira::before {
+    content: '\20A6';
+    margin-right: 1px;
+}

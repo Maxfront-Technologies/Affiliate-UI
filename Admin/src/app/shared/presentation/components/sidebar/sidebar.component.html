@@ -1,0 +1,41 @@
+<nav class="sidebar">
+
+  <div class="sidebar-header">
+    <img src="/assets/img/profile/image1.jpg" alt="" class="profile-img">
+    <h4 class="username">John Doe</h4>
+    <span class="role">Admin</span>
+  </div>
+
+  <div class="sidebar-content">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="#">
+            <i class="bi-house icon"></i>
+            Dashboard
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="collapse" aria-current="page" href="#applications">
+            <i class="bi-app icon"></i>
+            Applications
+        </a>
+        <div id="applications" class="sub-menu collapse">
+            <a href="#" class="item">Renderquiz</a>
+            <a href="#" class="item">Limsaa</a>
+            <a href="#" class="item">NES</a>
+            <a href="#" class="item">FISPAS</a>
+            <a href="#" class="item">OGISP</a>
+            <a href="#" class="item">IHCMS</a>
+            <a href="#" class="item">DCAS</a>
+            <a href="#" class="item">AFPA</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/affiliates" class="nav-link" aria-current="page" href="#">
+            <i class="bi-people icon"></i>
+            Affiliates
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
