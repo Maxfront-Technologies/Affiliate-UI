@@ -12,7 +12,8 @@ const routes: Routes = [
     path: 'affiliates',
     component: MainLayoutComponent,
     loadChildren: () => import('./affiliates/affiliates.module').then(m => m.AffiliatesModule)
-  }
+  },
+  { path: 'applications',component: MainLayoutComponent, loadChildren: () => import('./modules/applications/applications.module').then(m => m.ApplicationsModule) }
 ];
 
 @NgModule({

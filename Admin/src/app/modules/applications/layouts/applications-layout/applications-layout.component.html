@@ -1,0 +1,25 @@
+<input type='checkbox' id='menu_active' checked/>
+<div id='wrapper' class='active'>
+  <div id='menu'>
+    <span id='site-name'>
+        <label for='menu_active'><i class="fa fa-arrow-left"></i><i class="fa fa-bars"></i>RenderQuiz</label></span>
+    <ul>
+      <a href='/applications/dashboard'>
+        <li>Dashboard<i class="bi-app icon"></i></li>
+      </a>
+      <a href='/applications/affiliates/'>
+        <li>Affiliates<i class="bi-app icon"></i></li>
+      </a>
+      <a href='/applications/referrals/'>
+        <li>Referrals<i class="bi-app icon"></i></li>
+      </a>
+      <a href='/applications/report/'>
+        <li>Report<i class="bi-app icon"></i></li>
+      </a>
+      
+    </ul>
+  </div>
+  <div id='page-content'>
+   <router-outlet></router-outlet>
+  </div>
+</div>
