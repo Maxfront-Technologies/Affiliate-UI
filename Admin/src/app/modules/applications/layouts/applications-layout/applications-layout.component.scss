@@ -1,0 +1,20 @@
+aside {
+    position: absolute;
+    width: 250px;
+    background-color: red;
+    height: 100%;
+}
+
+aside .s-link {
+    display: block;
+    height: 40px;
+    background-color: white;
+    color: red;
+}
+
+main {
+    position: absolute;
+    height: 100%;
+    left: 250px;
+    padding: 16px;
+}
