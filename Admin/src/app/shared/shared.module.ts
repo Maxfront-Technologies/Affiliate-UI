@@ -13,7 +13,8 @@ import { SidebarComponent } from './presentation/components/sidebar/sidebar.comp
     MainLayoutComponent,
     UnauthLayoutComponent,
     TopbarComponent,
-    SidebarComponent
+    SidebarComponent,
+
   ],
   imports: [
     CommonModule,

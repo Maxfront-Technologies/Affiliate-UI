@@ -1,0 +1,101 @@
+
+  <div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
+    <div class="logo-container">
+      <button class="logo" (click)="toggleCollapse()">R</button>
+      <div class="logo-text" *ngIf="collapsed">Angular</div>
+      <button class="btn-close" *ngIf="collapsed" (click)="closeSidenav">
+        <i class="fal fa-times close-icon"></i>
+      </button>
+    </div>
+    
+    <ul class="sidenav-nav">
+      <li class="sidebar-nav-item">
+        <a routerLink="/affiliates/applications/affliates" class="sidenav-nav-link" aria-current="page">
+            <i class="sidenav-link-icon bi-house icon"></i>
+            <span class="sidenav-link-text">Affliates</span>
+            
+        </a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a routerLink="/affiliates/applications/affliates" class="sidenav-nav-link" aria-current="page">
+            <i class="sidenav-link-icon bi-house icon"></i>
+            <span class="sidenav-link-text">Affliates</span>
+            
+        </a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a routerLink="/affiliates/applications/affliates" class="sidenav-nav-link" aria-current="page">
+            <i class="sidenav-link-icon bi-house icon"></i>
+            <span class="sidenav-link-text">Affliates</span>
+            
+        </a>
+      </li>
+      
+      <!-- <li class="nav-item">
+        <a routerLink="/affiliates/applications/referrals" class="nav-link" aria-current="page" href="#">
+            <i class="bi-people icon"></i>
+            Referrals
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/affiliates/applications/reports" class="nav-link" aria-current="page">
+            <i class="bi-people icon"></i>
+            Reports
+        </a>
+      </li> -->
+
+    </ul>
+   
+  </div>
+  <!-- <div class="wrapper">
+    <h2>Application Workspace</h2>
+    <div class="row">
+      <div class="col-md-2 col-sm-4">
+        <div class="sidebar" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
+          <button class="logo" (click)="toggleCollapse()">R</button>
+          <button class="btn-close" *ngIf="collapsed" (click)="closeSidenav">
+            <i class="fal fa-times close-icon"></i>
+          </button>
+          <div class="sidebar-content">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a routerLink="/affiliates/applications/affliates" class="nav-link" aria-current="page">
+                    <i class="bi-house icon"></i>
+                    Affliates
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a routerLink="/affiliates/applications/referrals" class="nav-link" aria-current="page" href="#">
+                    <i class="bi-people icon"></i>
+                    Referrals
+                </a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/affiliates/applications/reports" class="nav-link" aria-current="page">
+                    <i class="bi-people icon"></i>
+                    Reports
+                </a>
+              </li>
+            
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10 col-sm-8">
+        <main class="content">
+          <div class="container-fluid">
+            <router-outlet></router-outlet>
+          </div>
+        </main>
+      </div>
+    </div>
+    
+  
+    
+  </div> -->
+
+
+
+
+  
