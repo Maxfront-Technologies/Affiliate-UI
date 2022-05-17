@@ -8,6 +8,7 @@ import { WorkspaceAffliatesComponent } from './views/applications-workspace/affi
 import { WorkspaceReferralsComponent } from './views/applications-workspace/referrals/workspace-referrals/workspace-referrals.component';
 import { WorkspaceReportsComponent } from './views/applications-workspace/reports/workspace-reports/workspace-reports.component';
 import { ReferralsCodeListComponent } from './views/referrals/referrals-code-list/referrals-code-list.component';
+import { PaymentboardComponent } from './views/applications-workspace/payments/paymentboard/paymentboard.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
       {path: '', component: ApplicationsWorkspaceComponent},
       {path: 'affliates', component: WorkspaceAffliatesComponent},
       {path: 'referrals', component: WorkspaceReferralsComponent},
-      {path: 'reports', component: WorkspaceReportsComponent}
+      {path: 'reports', component: WorkspaceReportsComponent},
+      {path: 'payment', component: PaymentboardComponent}
     ]
   },
 

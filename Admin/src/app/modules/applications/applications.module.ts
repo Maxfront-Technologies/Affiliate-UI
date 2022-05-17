@@ -12,6 +12,10 @@ import { ApplicationReferralsListComponent } from './views/referrals/application
 import { ApplicationReferralsDetailsComponent } from './views/referrals/application-referrals-details/application-referrals-details.component';
 import { ApplicationReferralsUpdateComponent } from './views/referrals/application-referrals-update/application-referrals-update.component';
 import { ApplicationReportComponent } from './views/report/application-report/application-report.component';
+import { PaymentboardComponent } from './views/payments/paymentboard/paymentboard.component';
+import { MyChartComponent } from './views/report/Charts/my-chart/my-chart.component';
+// import { NgxChartsModule } from '@swimlane/ngx-charts';
+
 
 
 @NgModule({
@@ -25,7 +29,10 @@ import { ApplicationReportComponent } from './views/report/application-report/ap
     ApplicationReferralsListComponent,
     ApplicationReferralsDetailsComponent,
     ApplicationReferralsUpdateComponent,
-    ApplicationReportComponent
+    ApplicationReportComponent,
+    PaymentboardComponent,
+    MyChartComponent,
+    // NgxChartsModule,
   ],
   imports: [
     CommonModule,

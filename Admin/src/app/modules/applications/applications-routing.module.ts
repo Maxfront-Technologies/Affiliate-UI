@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PaymentboardComponent } from 'src/app/affiliates/views/applications-workspace/payments/paymentboard/paymentboard.component';
+import { PaymentspageComponent } from 'src/app/affiliates/views/applications-workspace/payments/paymentspage/paymentspage.component';
 import { ApplicationsComponent } from './applications.component';
 import { ApplicationsLayoutComponent } from './layouts/applications-layout/applications-layout.component';
 import { ApplicationAffiliatesDetailsComponent } from './views/affiliates/application-affiliates-details/application-affiliates-details.component';
@@ -29,6 +31,10 @@ children: [
   { path: 'report',
   children:[
     { path: '', component: ApplicationReportComponent }
+  ]},
+  { path: 'payment',
+  children:[
+    { path: '', component: PaymentboardComponent }
   ]}
   // { path: 'affliatedetails', component: ApplicationAffiliatesDetailsComponent}
 
