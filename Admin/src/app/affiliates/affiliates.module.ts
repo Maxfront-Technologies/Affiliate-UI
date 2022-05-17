@@ -11,6 +11,9 @@ import { WorkspaceReferralsComponent } from './views/applications-workspace/refe
 import { WorkspaceAffliatesComponent } from './views/applications-workspace/affiliates/workspace-affliates/workspace-affliates.component';
 import { WorkspaceReportsComponent } from './views/applications-workspace/reports/workspace-reports/workspace-reports.component';
 import { MainComponent } from './views/applications-workspace/main/main.component';
+import { PaymentboardComponent } from './views/applications-workspace/payments/paymentboard/paymentboard.component';
+import { PaymentspageComponent } from './views/applications-workspace/payments/paymentspage/paymentspage.component';
+import { NgChartsModule } from 'ng2-charts';
 
 
 
@@ -24,7 +27,10 @@ import { MainComponent } from './views/applications-workspace/main/main.componen
     WorkspaceReferralsComponent,
     WorkspaceAffliatesComponent,
     WorkspaceReportsComponent,
-    MainComponent
+    MainComponent,
+    PaymentboardComponent,
+    PaymentspageComponent,
+    NgChartsModule
   ],
   imports: [
     CommonModule,
