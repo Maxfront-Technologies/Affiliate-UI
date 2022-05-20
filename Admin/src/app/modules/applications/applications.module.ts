@@ -15,7 +15,7 @@ import { ApplicationReportComponent } from './views/report/application-report/ap
 import { PaymentboardComponent } from './views/payments/paymentboard/paymentboard.component';
 import { MyChartComponent } from './views/report/Charts/my-chart/my-chart.component';
 // import { NgxChartsModule } from '@swimlane/ngx-charts';
-
+import { NgChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -31,12 +31,13 @@ import { MyChartComponent } from './views/report/Charts/my-chart/my-chart.compon
     ApplicationReferralsUpdateComponent,
     ApplicationReportComponent,
     PaymentboardComponent,
-    MyChartComponent,
+    MyChartComponent
     // NgxChartsModule,
   ],
   imports: [
     CommonModule,
-    ApplicationsRoutingModule
+    ApplicationsRoutingModule,
+    NgChartsModule
   ]
 })
 export class ApplicationsModule { }

@@ -1,0 +1,45 @@
+.dashboard-card {
+    border: none;
+    border-radius: 10px;
+    flex-direction: row;
+    transition: all .2s ease-in-out;
+    text-decoration: none;
+    color: var(--bs-dark);
+  
+    &:hover {
+        transform: translateY(-5px);
+        color: var(--bs-primary);
+    }
+  
+    .card-body {
+      display: grid;
+      grid-template-areas:
+        'icon count count'
+        'icon description descripiton';
+      column-gap: 20px;
+      justify-content: start;
+      align-items: center;
+    }
+  
+    .icon {
+      grid-area: icon;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background: #f1f4fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+  
+    .count {
+      grid-area: count;
+      font-size: 24px;
+    }
+  
+    .description {
+      grid-area: description;
+    }
+  }
+  
