@@ -16,6 +16,9 @@ import { PaymentboardComponent } from './views/payments/paymentboard/paymentboar
 import { MyChartComponent } from './views/report/Charts/my-chart/my-chart.component';
 // import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { NgChartsModule } from 'ng2-charts';
+import { ModalComponent } from './views/modaltest/modal/modal.component';
+import { BarChartComponent } from './views/report/Charts/bar-chart/bar-chart.component';
+import { PieChartComponent } from './views/report/Charts/pie-chart/pie-chart.component';
 
 
 @NgModule({
@@ -31,7 +34,10 @@ import { NgChartsModule } from 'ng2-charts';
     ApplicationReferralsUpdateComponent,
     ApplicationReportComponent,
     PaymentboardComponent,
-    MyChartComponent
+    MyChartComponent,
+    ModalComponent,
+    BarChartComponent,
+    PieChartComponent
     // NgxChartsModule,
   ],
   imports: [

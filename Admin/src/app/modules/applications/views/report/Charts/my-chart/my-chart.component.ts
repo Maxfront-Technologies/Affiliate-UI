@@ -10,15 +10,15 @@ export class MyChartComponent implements OnInit {
   chartData = [
     {
       data: [330, 600, 260, 700],
-      label: 'Account A'
+      label: 'Affliaites'
     },
     {
       data: [120, 455, 100, 340],
-      label: 'Account B'
+      label: 'Referrals'
     },
     {
       data: [45, 67, 800, 500],
-      label: 'Account C'
+      label: 'Commission'
     }
   ];
   chartLabels = [
