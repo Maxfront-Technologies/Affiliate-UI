@@ -30,6 +30,7 @@
     "font-awesome": "^4.7.0",
     "jsvectormap": "1.3.3",
     "ng2-charts": "^3.0.11",
+    "notiflix": "^3.2.5",
     "popper.js": "^1.16.1",
     "rxjs": "~7.5.0",
     "simplebar": "5.3.6",

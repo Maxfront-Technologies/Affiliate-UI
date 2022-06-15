@@ -6,13 +6,19 @@ import { SharedModule } from '../shared/shared.module';
 import { AffiliatesListComponent } from './views/affiliates-list/affiliates-list.component';
 import { ReferralsCodeListComponent } from './views/referrals/referrals-code-list/referrals-code-list.component';
 import { NgChartsModule } from 'ng2-charts';
+import { ReferralsCreateComponent } from './views/referrals/referrals-create/referrals-create.component';
+import { ReferralsEditComponent } from './views/referrals/referrals-edit/referrals-edit.component';
+import { ReferralsDetailsComponent } from './views/referrals/referrals-details/referrals-details.component';
 
 
 @NgModule({
   declarations: [
     AffiliatesComponent,
     AffiliatesListComponent,
-    ReferralsCodeListComponent
+    ReferralsCodeListComponent,
+    ReferralsCreateComponent,
+    ReferralsEditComponent,
+    ReferralsDetailsComponent
   ],
   imports: [
     CommonModule,

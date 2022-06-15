@@ -13,18 +13,18 @@
       <thead>
         <tr>
           <th>S/N</th>
-          <th>Referal code</th>
-          <th>No of Affliates</th>
-          <th>Times Used</th>
+          <th>Email</th>
+          <th>referalApplicationId</th>
+          <th>referalCode</th>
           <th>Actions</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th>1</th>
-          <td>101100</td>
-          <td>12</td>
-          <td>300</td>
+        <tr *ngFor="let referal of referals; let i = index;">
+          <th>{{i + 1}}</th>
+          <td>{{referal.email}}</td>
+          <td>{{referal.referalApplicationId}}</td>
+          <td>{{referal.referalCode}}</td>
           <td>
             <a type="button" routerLink="./details" class="btn btn-primary"><i class="bi bi-eye-fill"></i></a>
             <a type="button" routerLink="./update" class="btn btn-success"><i class="bi bi-pencil-fill"></i></a>

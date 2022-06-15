@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Notify } from 'notiflix';
+import { ReferalApplication } from 'src/app/domain/entities/referal-application.entity';
+import { ReferalApplicationService } from 'src/app/Infastructure/services/referal-application.service';
 
 @Component({
   selector: 'app-affiliates-list',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AffiliatesListComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  constructor(private referalService: ReferalApplicationService) { }
+  referalapplications: ReferalApplication[] = [];
+    ngOnInit(): void {
+      this.getReferals();
+    }
+    getReferals()
+    {
+      this.referalService.getReferals()
+      .subscribe({
+        next: (data) => {
+          this.referalapplications = data;
+        },
+        error: (error) => {
+          Notify.failure(error.message);
+        }
+      })
+    }
 }
+
+
