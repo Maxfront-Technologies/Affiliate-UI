@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, Observable, retry } from 'rxjs';
+import { catchError, Observable, pipe, retry } from 'rxjs';
 import { Referal } from 'src/app/domain/entities/referal.entity';
 import { BaseService } from './base.service';
 
@@ -9,6 +9,7 @@ import { BaseService } from './base.service';
 })
 export class ReferalsService extends BaseService {
 
+  
   constructor(http: HttpClient) {
     super(http)
   }
@@ -19,8 +20,8 @@ export class ReferalsService extends BaseService {
   }
   
   //GetById
-  getCountry(referalCode: string) : Observable<Referal> {
-    return this.http.get<Referal>(this.getURI('Referals/' + referalCode))
+  getReferal(referalCode: string) : Observable<Referal> {
+    return this.http.get<Referal>(`${this.getURI('Referals')}/ ${referalCode}`)
       .pipe(retry(1), catchError(this.handleError));
   }
   
@@ -31,8 +32,8 @@ export class ReferalsService extends BaseService {
   }
 
   //Update
-  updateReferal(id: number, referal: Referal) {
-    return this.http.put(this.getURI('Referals/' + id), referal)
+  updateReferal(referalCode: string, referal: Referal) {
+    return this.http.put(this.getURI('Referals/' + referalCode), referal)
       .pipe(retry(1), catchError(this.handleError));
   }
 }

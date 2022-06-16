@@ -9,6 +9,8 @@ import { NgChartsModule } from 'ng2-charts';
 import { ReferralsCreateComponent } from './views/referrals/referrals-create/referrals-create.component';
 import { ReferralsEditComponent } from './views/referrals/referrals-edit/referrals-edit.component';
 import { ReferralsDetailsComponent } from './views/referrals/referrals-details/referrals-details.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
 
 @NgModule({
@@ -24,7 +26,10 @@ import { ReferralsDetailsComponent } from './views/referrals/referrals-details/r
     CommonModule,
     AffiliatesRoutingModule,
     SharedModule,
-    NgChartsModule
+    NgChartsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    
   ],
 
 })

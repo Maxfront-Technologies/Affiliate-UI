@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AffiliatesComponent } from './affiliates.component';
 import { AffiliatesListComponent } from './views/affiliates-list/affiliates-list.component';
 import { ReferralsCodeListComponent } from './views/referrals/referrals-code-list/referrals-code-list.component';
+import { ReferralsCreateComponent } from './views/referrals/referrals-create/referrals-create.component';
+import { ReferralsDetailsComponent } from './views/referrals/referrals-details/referrals-details.component';
+import { ReferralsEditComponent } from './views/referrals/referrals-edit/referrals-edit.component';
 // import { ApplicationsWorkspaceComponent } from './views/applications-workspace/applications-workspace.component';
 // import { ApplicationsWorkspaceSidebarComponent } from './views/applications-workspace/layouts/applications-workspace-sidebar/applications-workspace-sidebar.component';
 // import { WorkspaceAffliatesComponent } from './views/applications-workspace/affiliates/workspace-affliates/workspace-affliates.component';
@@ -37,7 +40,18 @@ const routes: Routes = [
     children:[
       {
         path:'',component:ReferralsCodeListComponent
+      },
+      {
+        path:'create',component:ReferralsCreateComponent
+      },
+      {
+        path:'edit',component:ReferralsEditComponent
+      },
+      {
+        path:'details',component:ReferralsDetailsComponent
       }
+      
+
     ]
   }
 

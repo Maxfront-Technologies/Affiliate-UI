@@ -13,11 +13,11 @@ export class AffiliatesListComponent implements OnInit {
   constructor(private referalService: ReferalApplicationService) { }
   referalapplications: ReferalApplication[] = [];
     ngOnInit(): void {
-      this.getReferals();
+      this.getReferalApps();
     }
-    getReferals()
+    getReferalApps()
     {
-      this.referalService.getReferals()
+      this.referalService.getReferalApplications()
       .subscribe({
         next: (data) => {
           this.referalapplications = data;

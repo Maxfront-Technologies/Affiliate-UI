@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Referal } from 'src/app/domain/entities/referal.entity';
+import { ReferalsService } from 'src/app/Infastructure/services/referals.service';
 
 @Component({
   selector: 'app-referrals-details',
@@ -6,10 +9,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./referrals-details.component.scss']
 })
 export class ReferralsDetailsComponent implements OnInit {
+  
 
-  constructor() { }
+  referal!: Referal;
+  referalcode!: string;
+  constructor(public referalsService: ReferalsService, 
+    private router: Router, private route: ActivatedRoute
+    ) { }
 
   ngOnInit(): void {
+    this.getReferals(this.route.snapshot.paramMap.get('referalcode'));
+  }
+  
+  getReferals(referalcode: string | null): void{
+    this.referalsService.getReferal(this.referalcode)
+    .subscribe(
+      (data: Referal) => {
+        this.referal = data;        
+      });
   }
 
 }

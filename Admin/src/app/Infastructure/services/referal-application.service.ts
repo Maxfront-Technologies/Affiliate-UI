@@ -13,8 +13,13 @@ export class ReferalApplicationService extends BaseService {
     super(http)
   }
 
-  getReferals(): Observable<ReferalApplication[]> {
+  getReferalApplications(): Observable<ReferalApplication[]> {
     return this.http.get<ReferalApplication[]>(this.getURI('ReferalApplications'))
+      .pipe(retry(1), catchError(this.handleError));
+  }
+
+  getReferalApplicationById(id: number) : Observable<ReferalApplication> {
+    return this.http.get<ReferalApplication>(this.getURI('ReferalApplications/Referal/' + id))
       .pipe(retry(1), catchError(this.handleError));
   }
 }
