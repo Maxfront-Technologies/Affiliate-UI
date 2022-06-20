@@ -45,10 +45,10 @@ const routes: Routes = [
         path:'create',component:ReferralsCreateComponent
       },
       {
-        path:'edit',component:ReferralsEditComponent
+        path:':Id/edit',component:ReferralsEditComponent
       },
       {
-        path:'details',component:ReferralsDetailsComponent
+        path:':referalCode/detail',component:ReferralsDetailsComponent
       }
       
 

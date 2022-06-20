@@ -13,20 +13,17 @@ export class ReferralsDetailsComponent implements OnInit {
 
   referal!: Referal;
   referalcode!: string;
+
   constructor(public referalsService: ReferalsService, 
     private router: Router, private route: ActivatedRoute
     ) { }
 
   ngOnInit(): void {
-    this.getReferals(this.route.snapshot.paramMap.get('referalcode'));
+    this.referalcode = this.route.snapshot.params['referalCode'];
+    this.referalsService.getReferal(this.referalcode).subscribe((data: Referal) =>{
+      this.referal = data;
+    });
   }
   
-  getReferals(referalcode: string | null): void{
-    this.referalsService.getReferal(this.referalcode)
-    .subscribe(
-      (data: Referal) => {
-        this.referal = data;        
-      });
-  }
 
 }

@@ -14,15 +14,7 @@ import { ReferalsService } from 'src/app/Infastructure/services/referals.service
   styleUrls: ['./referrals-create.component.scss']
 })
 export class ReferralsCreateComponent implements OnInit {
- singlereferals: Referal[] = [];
 
- createreferal: Referal = {
-   email: '',
-   referalApplicationId: 0,
-   id: 0,
-   referalCode: '',
-   application: new ReferalApplication
- }
 
   constructor(private formBuilder: FormBuilder,
     private router: Router,
@@ -35,12 +27,18 @@ export class ReferralsCreateComponent implements OnInit {
   ngOnInit(): void {
     
     this.getReferalApps();
-    this.form = this.formBuilder.group({
-      email: ['', Validators.required],
-      referalApplicationId: ['', Validators.required]
+    this.form = new FormGroup({
+      email: new FormControl('', [Validators.required]),
+      referalApplicationId: new FormControl('', [Validators.required]) 
     });
 
   }
+
+  get f(){
+    return this.form.controls;
+  }
+
+
   getReferalApps()
   {
     this.referalAppService.getReferalApplications()
@@ -54,20 +52,13 @@ export class ReferralsCreateComponent implements OnInit {
     })
   }
   submitForm() {
-    // if (this.form.valid) {
-    //   this.referalService.createReferal(this.referal)
-    //     .subscribe({
-    //       next: () => {
-    //         this.router.navigate(['referrals/']);
-    //         console.log('created')
-    //         Notify.success('Referal created successfully');
-    //       },
-    //       error: (err) => {
-    //         console.log({err});
-    //       }
-    //     })
-    // }
-    console.log(this.createreferal);
+
+    console.log(this.form.value);
+    this.referalService.createReferal(this.form.value)
+    .subscribe((res:any) =>{
+      console.log('Post created successfully!');
+      this.router.navigateByUrl('./referrals/index')
+    })
   }
 
 }

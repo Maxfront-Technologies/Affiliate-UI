@@ -29,8 +29,8 @@
         <td>{{referal.referalApplicationId}}</td>
         <td>{{referal.referalCode}}</td>
         <td>
-          <a type="button" routerLink="./details/" class="btn btn-primary"><i class="bi bi-eye-fill"></i></a>
-          <a type="button" routerLink="./edit/{{referal.referalCode}}" class="btn btn-success"><i class="bi bi-pencil-fill"></i></a>
+          <a type="button" [routerLink]="['./', referal.referalCode, 'detail']" class="btn btn-primary"><i class="bi bi-eye-fill"></i></a>
+          <a type="button" routerLink="{{referal.id}}/edit" class="btn btn-success"><i class="bi bi-pencil-fill"></i></a>
           <a type="button" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
         </td>
       </tr>

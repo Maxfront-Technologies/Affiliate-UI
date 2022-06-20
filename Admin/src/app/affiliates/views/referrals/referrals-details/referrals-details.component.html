@@ -1,8 +1,7 @@
 <h2>referrals-details works!</h2>
 <div class="container">
-    <h1>View Post</h1>
-   
-    <a href="#" routerLink="" class="btn btn-primary">Back</a>
+
+    <a href="#" routerLink="/affiliates/referrals/" class="btn btn-primary">Back</a>
     
     <div>
         <strong>Email:</strong>
@@ -17,6 +16,15 @@
     <div>
         <strong>ReferalCode:</strong>
         <p>{{referal.referalCode}}</p>
+
     </div>
     
+    <div>
+        <strong>Application Name:</strong>
+        <p>{{referal.application.name}}</p>  
+    </div>
+    <div>
+        <strong>Description:</strong>
+        <p>{{referal.application.description}}</p>  
+    </div>
 </div>
