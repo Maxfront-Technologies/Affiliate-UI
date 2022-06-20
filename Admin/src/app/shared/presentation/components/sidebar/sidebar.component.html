@@ -20,7 +20,7 @@
             Applications
         </a>
         <div id="applications" class="sub-menu collapse">
-          <a routerLink="/applications/dashboard" class="item" *ngFor="let referal of referalapplications; let i = index;">{{referal.name}}</a>
+          <a [routerLink]="['applications/', referal.id, 'dashboard']"  class="item" *ngFor="let referal of referalapplications; let i = index;">{{referal.name}}</a>
             <!-- <a routerLink="/applications/dashboard" class="item">Renderquiz</a>
             <a href="#" class="item">Limsaa</a>
             <a href="#" class="item">NES</a>

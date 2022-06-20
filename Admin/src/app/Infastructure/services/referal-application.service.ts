@@ -19,7 +19,9 @@ export class ReferalApplicationService extends BaseService {
   }
 
   getReferalApplicationById(id: number) : Observable<ReferalApplication> {
-    return this.http.get<ReferalApplication>(this.getURI('ReferalApplications/Referal/' + id))
+    return this.http.get<ReferalApplication>(this.getURI('ReferalApplications/' + id))
       .pipe(retry(1), catchError(this.handleError));
   }
+
+
 }

@@ -6,8 +6,34 @@
     </div>
     
   </div>
+  <div class="card">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>S/N</th>
+          <th>Email</th>
+          <th>referalApplicationId</th>
+          <th>referalCode</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let referal of referals; let i = index;">
+          <th>{{i + 1}}</th>
+          <td>{{referal.email}}</td>
+          <td>{{referal.referalApplicationId}}</td>
+          <td>{{referal.referalCode}}</td>
+          <td>
+            <a type="button" [routerLink]="['./', referal.referalCode, 'detail']" class="btn btn-primary"><i class="bi bi-eye-fill"></i></a>
+            <a type="button" routerLink="{{referal.id}}/edit" class="btn btn-success"><i class="bi bi-pencil-fill"></i></a>
+            <a type="button" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
   
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
       <div class="bootcards-list col-sm-12">
         <div class="panel">         
@@ -128,5 +154,5 @@
         </div>
       </div>     
     </div>
-  </div>
+  </div> -->
   

@@ -16,8 +16,8 @@ import { ApplicationReportComponent } from './views/report/application-report/ap
 
 const routes: Routes = [{ path: '', component: ApplicationsLayoutComponent,
 children: [
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'affiliates',
+  { path: ':id/dashboard', component: DashboardComponent },
+  { path: ':id/affiliates',
   children:[
     { path: '', component: ApplicationAffiliatesListComponent },
     {path : 'details', component: ApplicationAffiliatesDetailsComponent},
