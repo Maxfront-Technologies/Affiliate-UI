@@ -19,7 +19,7 @@ export class ReferralsEditComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['referalCode'];
+    this.id = this.route.snapshot.params['id'];
     this.referalService.updateReferal(this.id,this.referal).subscribe((data: Referal) =>{
       this.referal = data;
     });
@@ -39,7 +39,7 @@ export class ReferralsEditComponent implements OnInit {
     this.referalService.updateReferal(this.id, this.form.value)
     .subscribe((res:any) => {
       console.log('Referal Updated Successfully!');
-      this.router.navigateByUrl('./index');
+      this.router.navigateByUrl('affiliates/referrals/');
     })
   }
 

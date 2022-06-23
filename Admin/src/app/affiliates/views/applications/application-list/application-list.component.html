@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md-6"></div>
+    <div class="col-md-3"></div>
+    <div class="col-md-3" style="margin-bottom: 30px;">
+      <input type="search" name="" id="" placeholder="Search" class="form-control">
+    </div>
+    
+  </div>
+  
+  
+  <div class="card">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>S/N</th>
+          <th>Name</th>
+          <th>Description</th>
+        
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let referal of referalapplications; let i = index;">
+          <th>{{i + 1}}</th>
+          <td>{{referal.name}}</td>
+          <td>{{referal.description}}</td>
+          
+          <td>
+            <a type="button" routerLink="./details" class="btn btn-primary"><i class="bi bi-eye-fill"></i></a>
+            <a type="button" routerLink="./update" class="btn btn-success"><i class="bi bi-pencil-fill"></i></a>
+            <a type="button" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

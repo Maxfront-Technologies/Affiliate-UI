@@ -11,6 +11,9 @@ import { ReferralsEditComponent } from './views/referrals/referrals-edit/referra
 import { ReferralsDetailsComponent } from './views/referrals/referrals-details/referrals-details.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
+import { ApplicationListComponent } from './views/applications/application-list/application-list.component';
+import { ApplicationCreateComponent } from './views/applications/application-create/application-create.component';
+import { ApplicationUpdateComponent } from './views/applications/application-update/application-update.component';
 
 
 @NgModule({
@@ -20,7 +23,10 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
     ReferralsCodeListComponent,
     ReferralsCreateComponent,
     ReferralsEditComponent,
-    ReferralsDetailsComponent
+    ReferralsDetailsComponent,
+    ApplicationListComponent,
+    ApplicationCreateComponent,
+    ApplicationUpdateComponent
   ],
   imports: [
     CommonModule,

@@ -50,7 +50,7 @@ export class ReferalsService extends BaseService {
   // }
 
   updateReferal(id: number, referal: Referal): Observable<Referal> {
-    return this.http.put<Referal>(this.getURI('Referals') + id, JSON.stringify(referal), this.httpOptions)
+    return this.http.put<Referal>(this.getURI('Referals/') + id, JSON.stringify(referal), this.httpOptions)
     .pipe(
       catchError(this.handleError)
     )

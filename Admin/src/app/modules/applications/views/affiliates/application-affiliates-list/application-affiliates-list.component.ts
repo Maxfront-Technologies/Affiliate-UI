@@ -28,7 +28,7 @@ ngOnInit(): void {
 }
 getReferals()
 {
-  this.appService.getReferalApplications()
+  this.appService.getReferalInApplications()
   .subscribe({
     next: (data) => {
       this.referals = data;

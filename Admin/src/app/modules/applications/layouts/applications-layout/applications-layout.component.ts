@@ -13,17 +13,12 @@ export class ApplicationsLayoutComponent implements OnInit {
   constructor(private referalService: ReferalApplicationService,private router: Router, private route: ActivatedRoute) { }
   id!: number;
   referalapps!: ReferalApplication;
-   
-  referalapplications: ReferalApplication[] = [];
 
-    ngOnInit(): void {
-
-
-      this.id = this.route.snapshot.params['id'];
+  ngOnInit(): void {
+    this.id = this.route.snapshot.params['id'];
       this.referalService.getReferalApplicationById(this.id).subscribe((data: ReferalApplication) =>{
         this.referalapps = data;
       });
     }
- 
   
 }

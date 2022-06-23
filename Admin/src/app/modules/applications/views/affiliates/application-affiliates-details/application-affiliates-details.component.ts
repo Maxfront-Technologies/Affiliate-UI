@@ -12,20 +12,9 @@ export class ApplicationAffiliatesDetailsComponent implements OnInit {
 
   constructor(private appService: ApplicationService) { }
     referals: Referal[] = [];
-    
+
   ngOnInit(): void {
-    this.getReferals();
+    
   }
-  getReferals()
-  {
-    this.appService.getReferalApplications()
-    .subscribe({
-      next: (data) => {
-        this.referals = data;
-      },
-      error: (error) => {
-        Notify.failure(error.message);
-      }
-    })
-  }
+  
 }

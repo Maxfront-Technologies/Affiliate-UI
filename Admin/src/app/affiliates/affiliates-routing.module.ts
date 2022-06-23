@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AffiliatesComponent } from './affiliates.component';
-import { AffiliatesListComponent } from './views/affiliates-list/affiliates-list.component';
+import { ApplicationCreateComponent } from './views/applications/application-create/application-create.component';
+import { ApplicationListComponent } from './views/applications/application-list/application-list.component';
+import { ApplicationUpdateComponent } from './views/applications/application-update/application-update.component';
 import { ReferralsCodeListComponent } from './views/referrals/referrals-code-list/referrals-code-list.component';
 import { ReferralsCreateComponent } from './views/referrals/referrals-create/referrals-create.component';
 import { ReferralsDetailsComponent } from './views/referrals/referrals-details/referrals-details.component';
@@ -17,11 +18,11 @@ import { ReferralsEditComponent } from './views/referrals/referrals-edit/referra
 
 const routes: Routes = [
   {
-    path: '',
-    component: AffiliatesComponent,
+    path: 'applications',
     children: [
-      { path: '', component: AffiliatesListComponent },
-      { path: 'create', component: AffiliatesListComponent }
+      { path: '', component: ApplicationListComponent },
+      { path: 'create', component: ApplicationCreateComponent },
+      {path: 'update', component: ApplicationUpdateComponent}
     ]
   },
   // {
