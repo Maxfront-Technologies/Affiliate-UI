@@ -14,10 +14,10 @@ import { ApplicationReferralsListComponent } from './views/referrals/application
 import { ApplicationReferralsUpdateComponent } from './views/referrals/application-referrals-update/application-referrals-update.component';
 import { ApplicationReportComponent } from './views/report/application-report/application-report.component';
 
-const routes: Routes = [{ path: '', component: ApplicationsLayoutComponent,
+const routes: Routes = [{ path: ':id', component: ApplicationsLayoutComponent,
 children: [
-  { path: ':id/dashboard', component: DashboardComponent },
-  { path: ':id/affiliates',
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'affiliates',
   children:[
     { path: '', component: ApplicationAffiliatesListComponent },
     {path : 'details', component: ApplicationAffiliatesDetailsComponent},

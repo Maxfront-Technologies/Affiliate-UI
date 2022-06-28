@@ -4,10 +4,11 @@
     <span id='site-name'>
         <label for='menu_active'><i class="bi bi-justify"></i></label></span>
     <ul>
-      <a href='/applications/dashboard'>
+
+      <a  [routerLink]="['/applications', id, 'dashboard']" >
         <li>Dashboard<i class="bi bi-house-fill" title="Dashboard"></i></li>
       </a>
-      <a href='' [routerLink]="['applications/', referalapps.id, 'affiliates']">
+      <a href='' [routerLink]="['/applications', id, 'affiliates']">
         <li>Affiliates<i class="bi bi-diagram-3-fill" title="Affliates"></i></li>
       </a>
       <a href='/applications/referrals/'>

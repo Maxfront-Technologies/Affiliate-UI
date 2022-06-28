@@ -1,13 +1,19 @@
-<div class="row">
+<!-- <div class="row">
     <div class="col-md-6"></div>
     <div class="col-md-3"></div>
     <div class="col-md-3" style="margin-bottom: 30px;">
       <input type="search" name="" id="" placeholder="Search" class="form-control">
     </div>
     
-  </div>
+  </div> -->
   
-  
+  <nav class="mb-3">
+    <a routerLink="./create" class="btn btn-primary">
+      <i class="bi-plus"></i>
+      Create
+    </a>
+  </nav>
+
   <div class="card">
     <table class="table">
       <thead>
@@ -26,8 +32,8 @@
           <td>{{referal.description}}</td>
           
           <td>
-            <a type="button" routerLink="./details" class="btn btn-primary"><i class="bi bi-eye-fill"></i></a>
-            <a type="button" routerLink="./update" class="btn btn-success"><i class="bi bi-pencil-fill"></i></a>
+            <!-- <a type="button" routerLink="./details" class="btn btn-primary"><i class="bi bi-eye-fill"></i></a> -->
+            <a type="button" [routerLink]="['./', referal.id, 'update']"  class="btn btn-success"><i class="bi bi-pencil-fill"></i></a>
             <a type="button" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
           </td>
         </tr>

@@ -19,6 +19,8 @@ import { NgChartsModule } from 'ng2-charts';
 import { ModalComponent } from './views/modaltest/modal/modal.component';
 import { BarChartComponent } from './views/report/Charts/bar-chart/bar-chart.component';
 import { PieChartComponent } from './views/report/Charts/pie-chart/pie-chart.component';
+import { RouterModule } from '@angular/router';
+import { BaseComponent } from './base/base.component';
 
 
 @NgModule({
@@ -37,13 +39,15 @@ import { PieChartComponent } from './views/report/Charts/pie-chart/pie-chart.com
     MyChartComponent,
     ModalComponent,
     BarChartComponent,
-    PieChartComponent
+    PieChartComponent,
+    BaseComponent
     // NgxChartsModule,
   ],
   imports: [
     CommonModule,
     ApplicationsRoutingModule,
-    NgChartsModule
+    NgChartsModule,
+    RouterModule
   ]
 })
 export class ApplicationsModule { }

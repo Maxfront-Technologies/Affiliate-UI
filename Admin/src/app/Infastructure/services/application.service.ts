@@ -18,8 +18,12 @@ export class ApplicationService extends BaseService{
     return this.http.get<Referal[]>(this.getURI('ReferalApplications/Referal/'))
       .pipe(catchError(this.handleError));
   }
-  getReferalApplicationById(id: number) : Observable<ReferalApplication> {
-    return this.http.get<ReferalApplication>(this.getURI('ReferalApplications/' + id))
-      .pipe(catchError(this.handleError));
+  // getReferalApplicationById(id: number) : Observable<ReferalApplication> {
+  //   return this.http.get<ReferalApplication>(this.getURI('ReferalApplications/Referal/' + id))
+  //     .pipe(catchError(this.handleError));
+  // }
+
+  getReferalApplicationById(id: number): Observable<any> {
+    return this.http.get(`${this.getURI('ReferalApplications/Referal')}/${id}`);
   }
 }

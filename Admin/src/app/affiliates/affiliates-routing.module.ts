@@ -7,6 +7,7 @@ import { ReferralsCodeListComponent } from './views/referrals/referrals-code-lis
 import { ReferralsCreateComponent } from './views/referrals/referrals-create/referrals-create.component';
 import { ReferralsDetailsComponent } from './views/referrals/referrals-details/referrals-details.component';
 import { ReferralsEditComponent } from './views/referrals/referrals-edit/referrals-edit.component';
+import { UsersListComponent } from './views/user/users-list/users-list.component';
 // import { ApplicationsWorkspaceComponent } from './views/applications-workspace/applications-workspace.component';
 // import { ApplicationsWorkspaceSidebarComponent } from './views/applications-workspace/layouts/applications-workspace-sidebar/applications-workspace-sidebar.component';
 // import { WorkspaceAffliatesComponent } from './views/applications-workspace/affiliates/workspace-affliates/workspace-affliates.component';
@@ -22,7 +23,7 @@ const routes: Routes = [
     children: [
       { path: '', component: ApplicationListComponent },
       { path: 'create', component: ApplicationCreateComponent },
-      {path: 'update', component: ApplicationUpdateComponent}
+      {path: ':id/update', component: ApplicationUpdateComponent}
     ]
   },
   // {
@@ -46,15 +47,20 @@ const routes: Routes = [
         path:'create',component:ReferralsCreateComponent
       },
       {
-        path:':Id/edit',component:ReferralsEditComponent
+        path:':referalCode/edit',component:ReferralsEditComponent
       },
       {
         path:':referalCode/detail',component:ReferralsDetailsComponent
       }
-      
-
     ]
+  },
+  {
+    path:'users',
+    children:[
+    {path: '', component: UsersListComponent}
+  ]
   }
+  
 
 ];
 

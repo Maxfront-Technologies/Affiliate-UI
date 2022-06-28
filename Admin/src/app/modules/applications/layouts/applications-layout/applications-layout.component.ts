@@ -10,15 +10,24 @@ import { ReferalApplicationService } from 'src/app/Infastructure/services/refera
 })
 export class ApplicationsLayoutComponent implements OnInit {
 
-  constructor(private referalService: ReferalApplicationService,private router: Router, private route: ActivatedRoute) { }
+  constructor(private referalService: ReferalApplicationService,
+    private router: Router,
+    private route: ActivatedRoute) { }
+    
   id!: number;
-  referalapps!: ReferalApplication;
+  referalapp!: ReferalApplication;
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['id'];
-      this.referalService.getReferalApplicationById(this.id).subscribe((data: ReferalApplication) =>{
-        this.referalapps = data;
-      });
+      this.route.params.subscribe((params) =>{
+        const appId = params['id']; 
+        this.id = Number.parseInt(appId);
+        
+        console.log(appId);
+        this.referalService.getReferalApplicationById(appId)
+        .subscribe((data: ReferalApplication) =>{
+          this.referalapp = data;
+        });
+      })
     }
   
 }

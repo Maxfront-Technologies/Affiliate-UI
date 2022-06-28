@@ -14,6 +14,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { ApplicationListComponent } from './views/applications/application-list/application-list.component';
 import { ApplicationCreateComponent } from './views/applications/application-create/application-create.component';
 import { ApplicationUpdateComponent } from './views/applications/application-update/application-update.component';
+import { UsersListComponent } from './views/user/users-list/users-list.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ApplicationUpdateComponent } from './views/applications/application-upd
     ReferralsDetailsComponent,
     ApplicationListComponent,
     ApplicationCreateComponent,
-    ApplicationUpdateComponent
+    ApplicationUpdateComponent,
+    UsersListComponent
   ],
   imports: [
     CommonModule,

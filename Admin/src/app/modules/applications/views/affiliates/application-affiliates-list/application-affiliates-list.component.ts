@@ -5,38 +5,38 @@ import { ReferalApplication } from 'src/app/domain/entities/referal-application.
 import { Referal } from 'src/app/domain/entities/referal.entity';
 import { ApplicationService } from 'src/app/Infastructure/services/application.service';
 import { ReferalApplicationService } from 'src/app/Infastructure/services/referal-application.service';
+import { BaseComponent } from '../../../base/base.component';
 
 @Component({
   selector: 'app-application-affiliates-list',
   templateUrl: './application-affiliates-list.component.html',
   styleUrls: ['./application-affiliates-list.component.scss']
 })
-export class ApplicationAffiliatesListComponent implements OnInit {
-  constructor(private appService: ApplicationService,private referalService: ReferalApplicationService,private router: Router, private route: ActivatedRoute) { }
+export class ApplicationAffiliatesListComponent extends BaseComponent {
+
+  constructor( referalService: ReferalApplicationService,
+    route: ActivatedRoute,
+     private appService: ApplicationService) {
+    super(referalService, route);
+  }
+
   referals: Referal[] = [];
-  id!: number;
-  referalapps!: ReferalApplication;
-  
-ngOnInit(): void {
-  this.id = this.route.snapshot.params['id'];
-  this.referalService.getReferalApplicationById(this.id).subscribe((data: ReferalApplication) =>{
-    this.referalapps = data;
-  });
 
-
-  this.getReferals();
-}
-getReferals()
-{
-  this.appService.getReferalInApplications()
-  .subscribe({
-    next: (data) => {
-      this.referals = data;
-    },
-    error: (error) => {
-      Notify.failure(error.message);
+    ngOnInit(): void {
+      this.getAppID();
+      this.getReferals();
     }
-  })
-}
+    getReferals()
+    {
+      this.appService.getReferalInApplications()
+      .subscribe({
+        next: (data) => {
+          this.referals = data;
+        },
+        error: (error) => {
+          Notify.failure(error.message);
+        }
+      })
+    }
 
 }

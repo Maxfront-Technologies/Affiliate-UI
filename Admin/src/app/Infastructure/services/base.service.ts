@@ -15,7 +15,7 @@ export class BaseService {
   getURI(relativePath: string): string {
     return this.baseURL + relativePath;
   }
-
+  
   public handleError(error: any) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {

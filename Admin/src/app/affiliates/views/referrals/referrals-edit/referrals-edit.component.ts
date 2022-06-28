@@ -10,7 +10,7 @@ import { ReferalsService } from 'src/app/Infastructure/services/referals.service
   styleUrls: ['./referrals-edit.component.scss']
 })
 export class ReferralsEditComponent implements OnInit {
-  id!: number;
+  referalCode!: string;
   referal!: Referal;
   form!: FormGroup;
 
@@ -19,13 +19,13 @@ export class ReferralsEditComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['id'];
-    this.referalService.updateReferal(this.id,this.referal).subscribe((data: Referal) =>{
+    this.referalCode = this.route.snapshot.params['referalCode'];
+    this.referalService.update(this.referalCode,this.referal).subscribe((data: Referal) =>{
       this.referal = data;
     });
 
     this.form = new FormGroup({
-      referalcode: new FormControl('', [Validators.required])
+      referalCode: new FormControl('', [Validators.required])
     });
   }
 
@@ -36,10 +36,10 @@ export class ReferralsEditComponent implements OnInit {
   submit()
   {
     console.log(this.form.value);
-    this.referalService.updateReferal(this.id, this.form.value)
+    this.referalService.update(this.referalCode, this.form.value)
     .subscribe((res:any) => {
       console.log('Referal Updated Successfully!');
-      this.router.navigateByUrl('affiliates/referrals/');
+      this.router.navigateByUrl('affiliates/referrals');
     })
   }
 

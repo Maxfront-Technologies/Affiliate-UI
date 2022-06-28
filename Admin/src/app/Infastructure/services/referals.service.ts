@@ -14,7 +14,7 @@ export class ReferalsService extends BaseService {
       'Content-Type': 'application/json'
     })
   }
-  
+
   constructor(http: HttpClient) {
     super(http)
   }
@@ -49,11 +49,18 @@ export class ReferalsService extends BaseService {
   //     .pipe(retry(1), catchError(this.handleError));
   // }
 
-  updateReferal(id: number, referal: Referal): Observable<Referal> {
-    return this.http.put<Referal>(this.getURI('Referals/') + id, JSON.stringify(referal), this.httpOptions)
-    .pipe(
-      catchError(this.handleError)
-    )
+  // updateReferal(id: number, referal: Referal): Observable<Referal> {
+  //   return this.http.put<Referal>(this.getURI('Referals'),referal)
+  //   .pipe(
+  //     catchError(this.handleError)
+  //   )
+  // }
+
+  // update(id: number, referal: Referal): Observable<any> {
+  //   return this.http.put(`${this.getURI}/${id}`, Referal);
+  // }
+  update(referalCode: string, referal: Referal): Observable<any> {
+    return this.http.put(`${this.getURI('Referals')}/${referalCode}`, referal);
   }
-    
+  
 }
