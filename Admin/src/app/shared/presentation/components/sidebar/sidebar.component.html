@@ -20,20 +20,33 @@
             Applications
         </a>
         <div id="applications" class="sub-menu collapse">
-            <a href="#" class="item">Renderquiz</a>
+          <a [routerLink]="['/applications', referal.id, 'dashboard']"  class="item" *ngFor="let referal of referalapplications; let i = index;">{{referal.name}}</a>
+            <!-- <a routerLink="/applications/dashboard" class="item">Renderquiz</a>
             <a href="#" class="item">Limsaa</a>
             <a href="#" class="item">NES</a>
             <a href="#" class="item">FISPAS</a>
             <a href="#" class="item">OGISP</a>
             <a href="#" class="item">IHCMS</a>
             <a href="#" class="item">DCAS</a>
-            <a href="#" class="item">AFPA</a>
+            <a href="#" class="item">AFPA</a> -->
         </div>
       </li>
       <li class="nav-item">
-        <a routerLink="/affiliates" class="nav-link" aria-current="page" href="#">
+        <a routerLink="/affiliates/applications" class="nav-link" aria-current="page" href="#">
             <i class="bi-people icon"></i>
-            Affiliates
+            Referal Applications
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/affiliates/referrals" class="nav-link" aria-current="page">
+            <i class="bi-people icon"></i>
+            Affliates
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/affiliates/users" class="nav-link" aria-current="page">
+            <i class="bi-people icon"></i>
+            Users
         </a>
       </li>
     </ul>

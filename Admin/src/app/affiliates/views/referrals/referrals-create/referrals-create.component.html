@@ -1,0 +1,32 @@
+<header class="mb-4">
+    <h1>Create Referral</h1>
+</header>
+
+<div class="row">
+    <div class="col-lg-6">
+        <form class="card" [formGroup]="form" (ngSubmit)="submitForm()">
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="text" class="form-control" formControlName="email" >
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="">Application ID</label>
+                    <select class="form-control" formControlName="referalApplicationId">
+                        <option [ngValue]="null" disabled>Select Application ID</option>
+                        <option *ngFor="let reapps of referalapplications" [ngValue]="reapps.id">{{reapps.name}}</option>
+                    </select>
+                </div>
+            </div>
+ 
+            <div class="card-footer">
+                <button class="btn btn-primary" type="submit" [disabled]="!form.valid">
+                    <i class="bi-plus"></i>
+                    Create
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

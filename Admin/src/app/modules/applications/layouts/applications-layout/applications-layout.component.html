@@ -1,0 +1,28 @@
+<input type='checkbox' id='menu_active' checked/>
+<div id='wrapper' class='active'>
+  <div id='menu'>
+    <span id='site-name'>
+        <label for='menu_active'><i class="bi bi-justify"></i></label></span>
+    <ul>
+
+      <a  [routerLink]="['/applications', id, 'dashboard']" >
+        <li>Dashboard<i class="bi bi-house-fill" title="Dashboard"></i></li>
+      </a>
+      <a href='' [routerLink]="['/applications', id, 'affiliates']">
+        <li>Affiliates<i class="bi bi-diagram-3-fill" title="Affliates"></i></li>
+      </a>
+      <a href='/applications/referrals/'>
+        <li>Referrals<i class="bi bi-people-fill" title="Referrals"></i></li>
+      </a>
+      <a href='/applications/report/'>
+        <li>Report<i class="bi bi-clipboard2-fill" title="Reports"></i></li>
+      </a>
+      <a href='/applications/payment/'>
+        <li>Payments<i class="bi bi-currency-dollar" title="Payments"></i></li>
+      </a>
+    </ul>
+  </div>
+  <div id='page-content'>
+   <router-outlet></router-outlet>
+  </div>
+</div>

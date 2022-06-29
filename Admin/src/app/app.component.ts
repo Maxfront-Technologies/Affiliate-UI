@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 
 export interface User {
   name: string;
@@ -20,10 +21,18 @@ const USERS_DATA: User[] = [
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'Admin';
 
   dataSource = USERS_DATA;
 
   displayedColumns = ['name', 'age'];
+
+  constructor() { }
+
+ 
+
+  ngOnInit(): void {
+    
+  }
 }
